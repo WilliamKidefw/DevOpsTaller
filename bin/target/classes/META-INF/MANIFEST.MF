@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: mitocode-calculator
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: asus
+Implementation-Vendor-Id: com.mitocode
+Build-Jdk: 1.8.0_221
+Implementation-URL: http://projects.spring.io/spring-boot/mitocode-cal
+ culator/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
