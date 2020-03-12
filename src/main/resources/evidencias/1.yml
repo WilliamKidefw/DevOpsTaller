@@ -1,0 +1,26 @@
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.4.RELEASE)
+
+2020-03-09 22:09:09.257  INFO 3172 --- [           main] c.m.c.SimpleCalculatorApplication        : Starting SimpleCalculatorApplication on DESKTOP-CGVOJ10 with PID 3172 (W:\DevOps\trabajo-final\app\target\classes started by asus in W:\DevOps\trabajo-final\app)
+2020-03-09 22:09:09.262  INFO 3172 --- [           main] c.m.c.SimpleCalculatorApplication        : No active profile set, falling back to default profiles: default
+2020-03-09 22:09:10.103  INFO 3172 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-03-09 22:09:10.110  INFO 3172 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-09 22:09:10.110  INFO 3172 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-03-09 22:09:10.182  INFO 3172 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-09 22:09:10.182  INFO 3172 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 879 ms
+2020-03-09 22:09:10.454  WARN 3172 --- [           main] uration$JodaDateTimeJacksonConfiguration : Auto-configuration of Jackson's Joda-Time integration is deprecated in favor of using java.time (JSR-310).
+2020-03-09 22:09:10.485  INFO 3172 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-09 22:09:10.532  INFO 3172 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2020-03-09 22:09:10.580  INFO 3172 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-03-09 22:09:10.591  INFO 3172 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-03-09 22:09:10.598  INFO 3172 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-03-09 22:09:10.748  INFO 3172 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-03-09 22:09:10.751  INFO 3172 --- [           main] c.m.c.SimpleCalculatorApplication        : Started SimpleCalculatorApplication in 1.762 seconds (JVM running for 2.578)
+2020-03-09 22:09:17.145  INFO 3172 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-09 22:09:17.145  INFO 3172 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-09 22:09:17.151  INFO 3172 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
