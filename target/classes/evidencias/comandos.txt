@@ -1,0 +1,2 @@
+docker build -t wyataco/prueba-api:1.0.0 .
+docker run --name=apiv1 -p 8082:8082 wyataco/prueba-api:1.0.0
