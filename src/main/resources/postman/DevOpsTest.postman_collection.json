@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "2aa3c150-979f-4487-89d4-18f87e579a54",
+		"name": "DevOpsTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetWhoami",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.60:8080/api/whoami",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"60"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"whoami"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Add",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.60:8080/api/add/{{num1}}/{{num2}}",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"60"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"add",
+						"{{num1}}",
+						"{{num2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sub",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.60:8080/api/sub/{{num1}}/{{num2}}",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"60"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sub",
+						"{{num1}}",
+						"{{num2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Mul",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.60:8080/api/mul/{{num1}}/{{num2}}",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"60"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mul",
+						"{{num1}}",
+						"{{num2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Div",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.1.60:8080/api/div/{{num1}}/{{num2}}",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"60"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"div",
+						"{{num1}}",
+						"{{num2}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
