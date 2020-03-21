@@ -11,11 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{HostPort}}/api/whoami",
+					"raw": "http://{{Host}}:{{Port}}/api/whoami",
 					"protocol": "http",
 					"host": [
-						"{{HostPort}}"
+						"{{Host}}"
 					],
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"whoami"
@@ -30,11 +31,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{HostPort}}/api/add/{{num1}}/{{num2}}",
+					"raw": "http://{{Host}}:{{Port}}/api/add/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"{{HostPort}}"
+						"{{Host}}"
 					],
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"add",
@@ -51,11 +53,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{HostPort}}/api/sub/{{num1}}/{{num2}}",
+					"raw": "http://{{Host}}:{{Port}}/api/sub/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"{{HostPort}}"
+						"{{Host}}"
 					],
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"sub",
@@ -72,11 +75,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{HostPort}}/api/mul/{{num1}}/{{num2}}",
+					"raw": "http://{{Host}}:{{Port}}/api/mul/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"{{HostPort}}"
+						"{{Host}}"
 					],
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"mul",
@@ -93,11 +97,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://{{HostPort}}/api/div/{{num1}}/{{num2}}",
+					"raw": "http://{{Host}}:{{Port}}/api/div/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"{{HostPort}}"
+						"{{Host}}"
 					],
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"div",

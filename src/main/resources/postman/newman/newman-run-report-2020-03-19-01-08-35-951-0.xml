@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="DevOpsTest" tests="5" time="0.192">
-  <testsuite name="GetWhoami" id="84d1a1d4-5b84-4843-867a-c3cd3e14cb8a" timestamp="2020-03-19T01:08:35.668Z" tests="0" failures="0" errors="0" time="0.116"/>
-  <testsuite name="Get Add" id="f719684f-318e-400b-bbd4-5107e3a5a7ce" timestamp="2020-03-19T01:08:35.668Z" tests="0" failures="0" errors="0" time="0.023"/>
-  <testsuite name="Get Sub" id="3591fc1f-e61f-4aef-a964-c37aab3b5341" timestamp="2020-03-19T01:08:35.668Z" tests="0" failures="0" errors="0" time="0.031"/>
-  <testsuite name="Get Mul" id="afbb34a1-5149-4384-bf58-656ad755079f" timestamp="2020-03-19T01:08:35.668Z" tests="0" failures="0" errors="0" time="0.012"/>
-  <testsuite name="Get Div" id="57621206-4483-432f-96f9-bbe767b13cc8" timestamp="2020-03-19T01:08:35.668Z" tests="0" failures="0" errors="0" time="0.010"/>
-</testsuites>

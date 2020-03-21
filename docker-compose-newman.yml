@@ -4,9 +4,9 @@ services:
   newman:
     image: postman/newman:alpine
     command:
-        run "DevOpsTest.postman_collection.json"
-        --environment="EnviromentDevOpTest.postman_environment.json" 
-        --reporters="cli,json,junit"
+        run DevOpsTest.postman_collection.json
+        -e EnviromentDevOpLocal.postman_environment.json 
+        -r cli,json,junit
         --reporter-json-export="devOps-results.json"
     volumes:
       - /W/DevOps/trabajo-final/app/src/main/resources/postman:/etc/newman

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="DevOpsTest" tests="5" time="0.000">
+  <testsuite name="GetWhoami" id="0d91bf3f-f45f-4297-9479-df8c36431760" timestamp="2020-03-21T21:40:43.368Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: socket hang up
+    at createHangUpError (_http_client.js:332:15)
+    at Socket.socketOnEnd (_http_client.js:435:23)
+    at Socket.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Add" id="a671062f-6d66-418d-9d59-dff04c83b8fc" timestamp="2020-03-21T21:40:43.368Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: socket hang up
+    at createHangUpError (_http_client.js:332:15)
+    at Socket.socketOnEnd (_http_client.js:435:23)
+    at Socket.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Sub" id="d7410f8b-b2b5-48ce-9c6a-34074ec5c533" timestamp="2020-03-21T21:40:43.368Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: socket hang up
+    at createHangUpError (_http_client.js:332:15)
+    at Socket.socketOnEnd (_http_client.js:435:23)
+    at Socket.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Mul" id="452d04d6-e108-44e4-9ed5-25d0a5e0fda6" timestamp="2020-03-21T21:40:43.368Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: socket hang up
+    at createHangUpError (_http_client.js:332:15)
+    at Socket.socketOnEnd (_http_client.js:435:23)
+    at Socket.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Div" id="08415e86-1abf-48aa-be2c-0496f1b6a06f" timestamp="2020-03-21T21:40:43.368Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: socket hang up
+    at createHangUpError (_http_client.js:332:15)
+    at Socket.socketOnEnd (_http_client.js:435:23)
+    at Socket.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+</testsuites>
