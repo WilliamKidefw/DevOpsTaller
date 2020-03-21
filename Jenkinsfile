@@ -43,6 +43,7 @@ pipeline {
 		always {
 			echo "Down ephemeral environment..."
 			sh "docker-compose -f docker-compose.dist down"
+			sh "docker rmi -f ${backendVersion}"
 		}
 		
 		success {

@@ -1,0 +1,20 @@
+pipeline {
+    agent any
+	
+	environment {
+		EXTERNAL_HOST_API = "http://${params.EXTERNAL_HOST_API}:8080"
+		INTERNAL_DOCKER_BACKEND = "wyataco/prueba-api:${env.BUILD_NUMBER}"
+	}
+	
+    stages {
+        stage('Build backend image') {
+            steps {
+				sh 'docker build -t ${INTERNAL_DOCKER_BACKEND} .'
+				withCredentials([usernamePassword(credentialsId: 'dockerhub' , usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
+					sh "docker login -u ${USERNAME} -p ${PASSWORD}"
+					sh "docker push ${INTERNAL_DOCKER_BACKEND}"
+				}
+            }
+        }      
+    }
+}

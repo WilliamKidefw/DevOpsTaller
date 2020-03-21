@@ -6,7 +6,7 @@
 
 		<groupId>com.mitocode</groupId>
 		<artifactId>mitocode-calculator</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 		<name>api</name>
 
 		<parent>
