@@ -27,7 +27,7 @@ pipeline {
         stage('Setup compose enviroment') {
             steps {
                 echo "Building backend image ${backendVersion}"
-				sh "docker buid -t ${backendVersion} ."
+				sh "docker build -t ${backendVersion} ."
 				echo "Generate docker-compose file"
 				sh "sed -i 's@{{BACKEND_DOCKER_IMAGE}}@${backendVersion}@g' docker-compose.dist"
 				sh 'cat docker-compose.dist'
