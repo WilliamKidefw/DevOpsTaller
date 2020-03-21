@@ -38,7 +38,7 @@ pipeline {
 				sh "sed -i 's@{{POSTMAN_PATH}}@${POSTMAN_TEST_PATH}@g' docker-compose.dist"
 				sh 'cat docker-compose.dist'
 				sh "docker-compose -f docker-compose.dist up -d"
-				sh "sleep 5"
+				sh "sleep 20"
 				sh "docker-compose -f docker-compose.dist ps"
             }
         }        
