@@ -7,6 +7,9 @@ pipeline {
 		EPHEMERAL_HOST = "${params.EPHEMERAL_HOST}"
 		CONTAINER_BACKEND_PATH = "${params.CONTAINER_BACKEND_PATH}"
 		API_EPHEMERAL_URL = "http://${EPHEMERAL_HOST}:9998"
+		POSTMAN_TEST = "${params.POSTMAN_TEST}"
+		POSTMAN_TEST_ENVIROMENT = "${params.POSTMAN_TEST_ENVIROMENT}"
+		POSTMAN_TEST_PATH = "${params.POSTMAN_TEST_PATH}"
 	}
 	
     stages {
@@ -28,8 +31,11 @@ pipeline {
             steps {
                 echo "Building backend image ${backendVersion}"
 				sh "docker build -t ${backendVersion} ."
-				echo "Generate docker-compose file"
+				echo "Generate docker-compose file"				
 				sh "sed -i 's@{{BACKEND_DOCKER_IMAGE}}@${backendVersion}@g' docker-compose.dist"
+				sh "sed -i 's@{{POSTMAN}}@${POSTMAN_TEST}@g' docker-compose.dist"
+				sh "sed -i 's@{{POSTMAN_ENVIROMENT}}@${POSTMAN_TEST_ENVIROMENT}@g' docker-compose.dist"
+				sh "sed -i 's@{{POSTMAN_PATH}}@${POSTMAN_TEST_PATH}@g' docker-compose.dist"
 				sh 'cat docker-compose.dist'
 				sh "docker-compose -f docker-compose.dist up -d"
 				sh "sleep 5"

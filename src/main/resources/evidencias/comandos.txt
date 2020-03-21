@@ -1,5 +1,6 @@
 --docker build -t wyataco/prueba-api:1.0.3 .
 --docker run --name=apiv1 -p 8082:8082 wyataco/prueba-api:1.0.0
+--docker pull postman/newman:alpine
 --docker run -v /W/DevOps/trabajo-final/app/src/main/resources/postman:/etc/newman -t postman/newman:alpine run "DevOpsTest.postman_collection.json" --environment="EnviromentDevOpLocal.postman_environment.json" --reporters="cli,json,junit" --reporter-json-export="devOps-results.json"
 --docker-compose up -d
 --docker-compose down

@@ -1,16 +1,30 @@
 version: '3.1'
 
 services:
+
   api:
     image: {{BACKEND_DOCKER_IMAGE}}
     restart: always
     networks:
       - apinet
     ports:
-      - 9998:9998
+      - 9998:5000
     environment:
       APP_PORT: 9998
-      SWAGGER_HOST: 172.31.95.147
+      SWAGGER_HOST: 34.226.147.19
+	  
+  newman:
+    image: postman/newman:alpine
+    restart: on-failure
+    networks:
+      - apinet
+    command:
+        run {{POSTMAN}}.postman_collection.json
+        -e {{POSTMAN_ENVIROMENT}}.postman_environment.json 
+        -r cli,json,junit
+        --reporter-json-export="devOps-results.json"
+    volumes:
+      - {{POSTMAN_PATH}}:/etc/newman
 
 networks:
   apinet:
