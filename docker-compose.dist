@@ -11,8 +11,7 @@ services:
       - 9998:5000
     environment:
       APP_PORT: 9998
-      SWAGGER_HOST: 34.226.147.19
-	  
+      SWAGGER_HOST: 184.72.110.98  
   newman:
     image: postman/newman:alpine
     restart: on-failure

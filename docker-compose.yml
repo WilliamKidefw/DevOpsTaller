@@ -12,7 +12,6 @@ services:
     environment:
       APP_PORT: 8899
       SWAGGER_HOST: 127.0.0.1
-  
   newman:
     image: postman/newman:alpine
     restart: on-failure
