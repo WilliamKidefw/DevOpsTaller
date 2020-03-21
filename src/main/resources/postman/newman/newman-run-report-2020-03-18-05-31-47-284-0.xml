@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="DevOpsTest" tests="5" time="0.000">
+  <testsuite name="GetWhoami" id="bb715272-503e-48e3-926d-1d19b899d305" timestamp="2020-03-18T05:31:31.692Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect EHOSTUNREACH 192.168.1.60:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Add" id="e96d7d81-ec23-4a30-a2dc-96b5cec33ac3" timestamp="2020-03-18T05:31:31.692Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect EHOSTUNREACH 192.168.1.60:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Sub" id="24160623-43da-4b52-9c4c-74c437dad07e" timestamp="2020-03-18T05:31:31.692Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect EHOSTUNREACH 192.168.1.60:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Mul" id="58dac33c-8a0f-42fa-a6f7-b42517ff8278" timestamp="2020-03-18T05:31:31.692Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect EHOSTUNREACH 192.168.1.60:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Div" id="5d8050d9-a799-4278-bb90-3cfe88995e6d" timestamp="2020-03-18T05:31:31.692Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect EHOSTUNREACH 192.168.1.60:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+</testsuites>

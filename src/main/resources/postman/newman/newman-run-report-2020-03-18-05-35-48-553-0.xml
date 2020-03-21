@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="DevOpsTest" tests="5" time="0.000">
+  <testsuite name="GetWhoami" id="853af361-a03c-4792-a38c-791b8d494e89" timestamp="2020-03-18T05:35:44.090Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND app_apinet app_apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Add" id="5f02fe17-ded3-4589-a36a-6eaa383c3446" timestamp="2020-03-18T05:35:44.090Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND app_apinet app_apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Sub" id="b072783c-85fb-473f-8204-8d8e35dadac8" timestamp="2020-03-18T05:35:44.090Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND app_apinet app_apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Mul" id="aca86955-5c55-42df-9391-166e86ac77e1" timestamp="2020-03-18T05:35:44.090Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND app_apinet app_apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Div" id="aeaa9e86-cf3f-4668-80b5-6e102a9abb75" timestamp="2020-03-18T05:35:44.090Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND app_apinet app_apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+</testsuites>

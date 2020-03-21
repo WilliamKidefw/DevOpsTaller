@@ -11,13 +11,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/api/whoami",
+					"raw": "http://192.168.1.60:8080/api/whoami",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"192",
+						"168",
+						"1",
+						"60"
 					],
 					"port": "8080",
 					"path": [
@@ -34,13 +34,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/api/add/{{num1}}/{{num2}}",
+					"raw": "http://192.168.1.60:8080/api/add/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"192",
+						"168",
+						"1",
+						"60"
 					],
 					"port": "8080",
 					"path": [
@@ -59,13 +59,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/api/sub/{{num1}}/{{num2}}",
+					"raw": "http://192.168.1.60:8080/api/sub/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"192",
+						"168",
+						"1",
+						"60"
 					],
 					"port": "8080",
 					"path": [
@@ -84,13 +84,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/api/mul/{{num1}}/{{num2}}",
+					"raw": "http://192.168.1.60:8080/api/mul/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"192",
+						"168",
+						"1",
+						"60"
 					],
 					"port": "8080",
 					"path": [
@@ -109,13 +109,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:8080/api/div/{{num1}}/{{num2}}",
+					"raw": "http://192.168.1.60:8080/api/div/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"192",
+						"168",
+						"1",
+						"60"
 					],
 					"port": "8080",
 					"path": [

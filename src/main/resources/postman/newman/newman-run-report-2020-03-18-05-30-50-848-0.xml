@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="DevOpsTest" tests="5" time="0.000">
+  <testsuite name="GetWhoami" id="e75eca19-a52d-452f-af99-def998707ba8" timestamp="2020-03-18T05:30:50.656Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Add" id="1c0d5894-f431-4a2b-b3f0-bece3b84ccdf" timestamp="2020-03-18T05:30:50.656Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Sub" id="d7c2fb3d-2463-4e9c-8e92-18979bc384d3" timestamp="2020-03-18T05:30:50.656Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Mul" id="d5ea3942-1794-4bf7-8679-f579f1791eca" timestamp="2020-03-18T05:30:50.656Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Div" id="a2ac78b7-cad8-4956-a02f-7dbb0577cdf1" timestamp="2020-03-18T05:30:50.656Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: connect ECONNREFUSED 127.0.0.1:5000
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1107:14)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+</testsuites>

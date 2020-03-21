@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="DevOpsTest" tests="5" time="0.000">
+  <testsuite name="GetWhoami" id="21ee2a93-a6ab-4627-a03f-159b0c53ad5f" timestamp="2020-03-18T05:34:01.198Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND apinet apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Add" id="4f8fd90a-3d37-4fdc-9d4e-887dfb1e0416" timestamp="2020-03-18T05:34:01.198Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND apinet apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Sub" id="c086b666-95ec-4be6-b767-c0aea6fbaa3e" timestamp="2020-03-18T05:34:01.198Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND apinet apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Mul" id="cd5f91c2-dbda-48bb-9ecd-82858d7cd63a" timestamp="2020-03-18T05:34:01.198Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND apinet apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get Div" id="43038d4f-cf99-4423-80c4-6a7d3a1f9c70" timestamp="2020-03-18T05:34:01.198Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err>
+      <![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND apinet apinet:5000
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+
+---
+]]>
+    </system-err>
+  </testsuite>
+</testsuites>
