@@ -3,7 +3,7 @@ backendVersion = '0.0.0'
 pipeline {
     agent any
 	
-	enviroment {
+	environment {
 		EPHEMERAL_HOST = "${params.EPHEMERAL_HOST}"
 		CONTAINER_BACKEND_PATH = "${params.CONTAINER_BACKEND_PATH}"
 		API_EPHEMERAL_URL = "http://${EPHEMERAL_HOST}:9998"
@@ -41,7 +41,7 @@ pipeline {
 	post {
 	
 		always {
-			echo "Down ephemeral enviroment..."
+			echo "Down ephemeral environment..."
 			sh "docker-compose -f docker-compose.dist down"
 		}
 		
