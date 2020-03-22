@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+  newman:
+    image: postman/newman:alpine
+    restart: on-failure
+    command:
+        run DevOpsTest.postman_collection.json
+        -e EnviromentDevOpLocal.postman_environment.json 
+        -r cli,json,junit
+        --reporter-json-export="devOps-results.json"
+    volumes:
+      - /W/DevOps/trabajo-final/app/src/main/resources/postman:/etc/newman
