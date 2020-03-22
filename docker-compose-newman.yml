@@ -5,4 +5,4 @@ services:
     image: postman/newman:alpine
     restart: on-failure
     command:
-        run -t postman/newman:alpine run "https://www.getpostman.com/collections/f8d7e82fd742f91a2dad --reporters="junit,cli" --reporter-junit-export="newman-report.xml"
+        run -t postman/newman:alpine run "https://www.getpostman.com/collections/f8d7e82fd742f91a2dad" --reporters="junit,cli" --reporter-junit-export="newman-report.xml"
