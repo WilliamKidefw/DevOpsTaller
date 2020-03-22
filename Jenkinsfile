@@ -41,10 +41,7 @@ pipeline {
         }
 		stage('Test API Rest') {
 			steps {
-				dir("${env.WORKSPACE}/src/main/resources/${POSTMAN_TEST_PATH}") {
-					sh 'newman run "${POSTMAN_TEST}.postman_collection.json" -e "${POSTMAN_TEST_ENVIROMENT}.postman_environment.json" -r cli,json,junit --reporter-json-export var/reports/newman/json/devOps-results.json'
-				}
-				
+				sh 'docker run -t postman/newman:alpine run "https://www.getpostman.com/collections/f8d7e82fd742f91a2dad"'
 			}
 		}		
     }
