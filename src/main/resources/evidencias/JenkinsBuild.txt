@@ -1,0 +1,191 @@
+Started by user admin
+Obtained JenkinsfileBuild from git https://github.com/WilliamKidefw/DevOpsTaller.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/devops-build
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/WilliamKidefw/DevOpsTaller.git # timeout=10
+Fetching upstream changes from https://github.com/WilliamKidefw/DevOpsTaller.git
+ > git --version # timeout=10
+ > git fetch --tags --force --progress -- https://github.com/WilliamKidefw/DevOpsTaller.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 966b473d7e5bd93a4a0bb52eaf2e18a97d54d078 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 966b473d7e5bd93a4a0bb52eaf2e18a97d54d078 # timeout=10
+Commit message: "Update JenkinsFile"
+ > git rev-list --no-walk 4e1e41db2d5e7b923ec8b4384f5666730a3970db # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Build backend image)
+[Pipeline] sh
++ docker build -t wyataco/prueba-api:4 .
+Sending build context to Docker daemon  51.35MB
+
+Step 1/15 : FROM maven:3.6.3-jdk-11-slim AS builder
+ ---> 828766b5e113
+Step 2/15 : WORKDIR /app
+ ---> Using cache
+ ---> 819d809d057d
+Step 3/15 : COPY pom.xml .
+ ---> Using cache
+ ---> a562ba347572
+Step 4/15 : RUN mvn -B -e -C -T 1C org.apache.maven.plugins:maven-dependency-plugin:3.0.2:go-offline
+ ---> Using cache
+ ---> 41a9d9a9bbab
+Step 5/15 : COPY src ./src
+ ---> f18d34bfdd44
+Step 6/15 : RUN ls -la ./src
+ ---> Running in e1535f30ee6f
+total 0
+drwxr-xr-x 4 root root 30 Mar 21 23:15 .
+drwxr-xr-x 1 root root 17 Mar 21 23:15 ..
+drwxr-xr-x 4 root root 35 Mar 21 18:51 main
+drwxr-xr-x 3 root root 18 Mar 21 18:51 test
+Removing intermediate container e1535f30ee6f
+ ---> ada6378fd073
+Step 7/15 : RUN mvn clean package -Dmaven.test.skip=true
+ ---> Running in b66c3c4430c0
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.mitocode:mitocode-calculator >------------------
+[INFO] Building api 0.0.1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ mitocode-calculator ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ mitocode-calculator ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 11 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ mitocode-calculator ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 3 source files to /app/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ mitocode-calculator ---
+[INFO] Not copying test resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ mitocode-calculator ---
+[INFO] Not compiling test sources
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ mitocode-calculator ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ mitocode-calculator ---
+[INFO] Building jar: /app/target/mitocode-calculator.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.4.RELEASE:repackage (repackage) @ mitocode-calculator ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.698 s
+[INFO] Finished at: 2020-03-21T23:15:28Z
+[INFO] ------------------------------------------------------------------------
+Removing intermediate container b66c3c4430c0
+ ---> bb5607b5a642
+Step 8/15 : RUN ls -la /app
+ ---> Running in 5c990bea047c
+total 4
+drwxr-xr-x 1 root root   20 Mar 21 23:15 .
+drwxr-xr-x 1 root root    6 Mar 21 23:15 ..
+-rw-r--r-- 1 root root 2419 Mar 21 18:51 pom.xml
+drwxr-xr-x 4 root root   30 Mar 21 23:15 src
+drwxr-xr-x 6 root root  159 Mar 21 23:15 target
+Removing intermediate container 5c990bea047c
+ ---> 0091af1f9011
+Step 9/15 : FROM openjdk:11.0.6-jdk
+ ---> d29dd615eaf4
+Step 10/15 : LABEL maintainer="will.kidefw@gmail.com"
+ ---> Running in e0116f58fcbb
+Removing intermediate container e0116f58fcbb
+ ---> d13041636450
+Step 11/15 : WORKDIR /workspace
+ ---> Running in 6030bebd51fe
+Removing intermediate container 6030bebd51fe
+ ---> ee4aea3a7330
+Step 12/15 : RUN ls -la /workspace
+ ---> Running in b49bd0ab08eb
+total 0
+drwxr-xr-x 2 root root 6 Mar 21 23:15 .
+drwxr-xr-x 1 root root 6 Mar 21 23:15 ..
+Removing intermediate container b49bd0ab08eb
+ ---> ce866861d3cb
+Step 13/15 : COPY --from=builder /app/target/mitocode*.jar app.jar
+ ---> a48b278a8c86
+Step 14/15 : RUN ls -la /workspace
+ ---> Running in 328b534fa51b
+total 26344
+drwxr-xr-x 1 root root       21 Mar 21 23:15 .
+drwxr-xr-x 1 root root        6 Mar 21 23:15 ..
+-rw-r--r-- 1 root root 26974431 Mar 21 23:15 app.jar
+Removing intermediate container 328b534fa51b
+ ---> 1da0398f3a19
+Step 15/15 : ENTRYPOINT exec java -jar /workspace/app.jar
+ ---> Running in e4d05c36c80f
+Removing intermediate container e4d05c36c80f
+ ---> d73def2e4ecb
+Successfully built d73def2e4ecb
+Successfully tagged wyataco/prueba-api:4
+[Pipeline] withCredentials
+Masking supported pattern matches of $USERNAME or $PASSWORD
+[Pipeline] {
+[Pipeline] sh
++ docker login -u **** -p ****
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+[Pipeline] sh
++ docker push ****/prueba-api:4
+The push refers to repository [docker.io/****/prueba-api]
+d0e0409ed51b: Preparing
+b5cd5d994a6e: Preparing
+4186db990701: Preparing
+5b5fbf48ec75: Preparing
+832f129ebea4: Preparing
+6670e930ed33: Preparing
+c7f27a4eb870: Preparing
+e70dfb4c3a48: Preparing
+1c76bd0dc325: Preparing
+6670e930ed33: Waiting
+c7f27a4eb870: Waiting
+e70dfb4c3a48: Waiting
+1c76bd0dc325: Waiting
+4186db990701: Layer already exists
+832f129ebea4: Layer already exists
+5b5fbf48ec75: Layer already exists
+6670e930ed33: Layer already exists
+c7f27a4eb870: Layer already exists
+e70dfb4c3a48: Layer already exists
+1c76bd0dc325: Layer already exists
+b5cd5d994a6e: Pushed
+d0e0409ed51b: Pushed
+4: digest: sha256:db0cc7bcbabcbc070c1847cbbdef7ab253f4a155aa95ea117dc15f68525c3375 size: 2213
+[Pipeline] }
+[Pipeline] // withCredentials
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
