@@ -41,7 +41,10 @@ pipeline {
         }
 		stage('Setup Postman') {
 			steps {
-				sh 'docker run postman/newman:alpine run "https://www.getpostman.com/collections/f8d7e82fd742f91a2dad" --reporters="json,cli" --reporter-json-export="var/reports/newman/json/devOps-results.json"'
+				sh 'cat docker-compose-newman.yml'
+				sh "docker-compose -f docker-compose-newman.yml up -d"
+				sh "sleep 5"
+				sh "docker-compose -f docker-compose-newman.yml ps"
 			}
 		}		
     }
@@ -50,6 +53,8 @@ pipeline {
 	
 		always {
 			echo "Down ephemeral environment..."
+			sh "docker-compose -f docker-compose.dist down"
+			sh "docker rmi -f ${backendVersion}"
 		}
 		
 		success {
