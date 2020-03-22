@@ -12,19 +12,7 @@ services:
     environment:
       APP_PORT: 8899
       SWAGGER_HOST: 127.0.0.1
-  newman:
-    image: postman/newman:alpine
-    restart: on-failure
-    networks:
-      - apinet
-    command:
-        run DevOpsTest.postman_collection.json
-        -e EnviromentDevOpLocal.postman_environment.json 
-        -r cli,json,junit
-        --reporter-json-export="devOps-results.json"
-    volumes:
-      - /W/DevOps/trabajo-final/app/src/main/resources/postman:/etc/newman
-          
+
 networks:
   apinet:
     driver: bridge

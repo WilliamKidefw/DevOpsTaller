@@ -11,19 +11,7 @@ services:
       - 9998:5000
     environment:
       APP_PORT: 9998
-      SWAGGER_HOST: 184.72.110.98  
-  newman:
-    image: postman/newman:alpine
-    restart: on-failure
-    networks:
-      - apinet
-    command:
-        run {{POSTMAN}}.postman_collection.json
-        -e {{POSTMAN_ENVIROMENT}}.postman_environment.json 
-        -r cli,json,junit
-        --reporter-json-export="devOps-results.json"
-    volumes:
-      - {{POSTMAN_PATH}}:/etc/newman
+      SWAGGER_HOST: 184.72.110.98
 
 networks:
   apinet:

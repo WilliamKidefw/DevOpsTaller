@@ -33,15 +33,17 @@ pipeline {
 				sh "docker build -t ${backendVersion} ."
 				echo "Generate docker-compose file"				
 				sh "sed -i 's@{{BACKEND_DOCKER_IMAGE}}@${backendVersion}@g' docker-compose.dist"
-				sh "sed -i 's@{{POSTMAN}}@${POSTMAN_TEST}@g' docker-compose.dist"
-				sh "sed -i 's@{{POSTMAN_ENVIROMENT}}@${POSTMAN_TEST_ENVIROMENT}@g' docker-compose.dist"
-				sh "sed -i 's@{{POSTMAN_PATH}}@${POSTMAN_TEST_PATH}@g' docker-compose.dist"
 				sh 'cat docker-compose.dist'
 				sh "docker-compose -f docker-compose.dist up -d"
-				sh "sleep 20"
+				sh "sleep 5"
 				sh "docker-compose -f docker-compose.dist ps"
             }
-        }        
+        }
+		stage('Test API Rest') {
+			steps {
+				sh 'docker run -v ${POSTMAN_TEST_PATH}:/etc/newman -t postman/newman:alpine run "${POSTMAN_TEST}.postman_collection.json" --environment="${POSTMAN_TEST_ENVIROMENT}.postman_environment.json" --reporters="cli,json,junit" --reporter-json-export="devOps-results.json"'
+			}
+		}		
     }
 	
 	post {
