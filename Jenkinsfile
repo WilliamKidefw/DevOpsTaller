@@ -41,7 +41,7 @@ pipeline {
         }
 		stage('Setup Postman') {
 			steps {
-				sh 'docker run -t postman/newman:alpine run "https://www.getpostman.com/collections/f8d7e82fd742f91a2dad"'
+				sh 'docker run postman/newman:alpine run "https://www.getpostman.com/collections/f8d7e82fd742f91a2dad" --reporters="json,cli" --reporter-json-export="var/reports/newman/json/devOps-results.json"'
 			}
 		}		
     }
