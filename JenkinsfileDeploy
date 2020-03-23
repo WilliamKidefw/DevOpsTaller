@@ -15,7 +15,7 @@ pipeline {
         stage('Deploy stack backend') {
             when { environment name: 'DEPLOY_TO_BACKEND', value:'yes'}
 			steps {
-				sh 'ssh -o StrictHostKeyChecking-no -i ${APPLICATION_PEM} ec2-user@${APPLICATION_SERVER} \"docker service update --image ${INTERNAL_DOCKER_BACKEND} ${SERVICE_BACKEND}\"'
+				sh 'ssh -o StrictHostKeyChecking=no -i ${APPLICATION_PEM} ec2-user@${APPLICATION_SERVER} \"docker service update --image ${INTERNAL_DOCKER_BACKEND} ${SERVICE_BACKEND}\"'
             }
         }      
     }
