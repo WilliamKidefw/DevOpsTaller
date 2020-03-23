@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  api:
+    image: wyataco/prueba-api:4
+    deploy:
+      replicas: 1
+    environment:
+      APP_PORT: 8080
+      SWAGGER_HOST: 34.239.131.223
+    ports:
+      - 8080:5000
+    networks:
+      - api-tier
+
+networks:
+  api-tier:

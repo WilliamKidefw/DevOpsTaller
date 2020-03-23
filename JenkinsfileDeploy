@@ -1,0 +1,22 @@
+pipeline {
+    agent any
+	
+	environment {
+		STACK_NAME = "${params.STACK_NAME}"
+		SERVICE_BACKEND = "${STACK_NAME}_api"
+		STACK_VERSION = "${params.STACK_VERSION}"
+		DEPLOY_TO_BACKEND = "${params.DEPLOY_TO_BACKEND}"
+		APPLICATION_SERVER = ${params.APPLICATION_SERVER}"
+		APPLICATION_PEM = "/var/lib/jenkins/pems/devOpsDemo.pem"
+		INTERNAL_DOCKER_BACKEND = "wyataco/prueba-api:${STACK_VERSION}"
+	}
+	
+    stages {
+        stage('Deploy stack backend') {
+            when { environment name: 'DEPLOY_TO_BACKEND'. value:'yes'}
+			steps {
+				sh 'ssh -o StrictHostKeyChecking-no -i ${APPLICATION_PEM} ec2-user@${APPLICATION_SERVER} \"docker service update --image ${INTERNAL_DOCKER_BACKEND} ${SERVICE_BACKEND}\'
+            }
+        }      
+    }
+}
