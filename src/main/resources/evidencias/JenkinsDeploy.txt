@@ -1,0 +1,106 @@
+Started by user admin
+Obtained JenkinsfileDeploy from git https://github.com/WilliamKidefw/DevOpsTaller.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/devops-deploy
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/WilliamKidefw/DevOpsTaller.git # timeout=10
+Fetching upstream changes from https://github.com/WilliamKidefw/DevOpsTaller.git
+ > git --version # timeout=10
+ > git fetch --tags --force --progress -- https://github.com/WilliamKidefw/DevOpsTaller.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 435ae836a75c72daac2482306d417e3f7fc03ff8 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 435ae836a75c72daac2482306d417e3f7fc03ff8 # timeout=10
+Commit message: "Update JenkinsfileDeploy"
+ > git rev-list --no-walk 435ae836a75c72daac2482306d417e3f7fc03ff8 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Deploy stack backend)
+[Pipeline] sh
++ ssh -o StrictHostKeyChecking=no -i /var/lib/jenkins/pems/devOpsDemo.pem ec2-user@34.239.131.223 'docker service update --image wyataco/prueba-api:5 devops-stack_api'
+devops-stack_api
+overall progress: 0 out of 1 tasks
+1/1:  
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 0 out of 1 tasks
+overall progress: 1 out of 1 tasks
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 5 seconds to verify that tasks are stable...
+verify: Waiting 4 seconds to verify that tasks are stable...
+verify: Waiting 4 seconds to verify that tasks are stable...
+verify: Waiting 4 seconds to verify that tasks are stable...
+verify: Waiting 4 seconds to verify that tasks are stable...
+verify: Waiting 4 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 3 seconds to verify that tasks are stable...
+verify: Waiting 2 seconds to verify that tasks are stable...
+verify: Waiting 2 seconds to verify that tasks are stable...
+verify: Waiting 2 seconds to verify that tasks are stable...
+verify: Waiting 2 seconds to verify that tasks are stable...
+verify: Waiting 2 seconds to verify that tasks are stable...
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Waiting 1 seconds to verify that tasks are stable...
+verify: Service converged
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
