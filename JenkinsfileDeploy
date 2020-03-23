@@ -6,7 +6,7 @@ pipeline {
 		SERVICE_BACKEND = "${STACK_NAME}_api"
 		STACK_VERSION = "${params.STACK_VERSION}"
 		DEPLOY_TO_BACKEND = "${params.DEPLOY_TO_BACKEND}"
-		APPLICATION_SERVER = ${params.APPLICATION_SERVER}"
+		APPLICATION_SERVER = "${params.APPLICATION_SERVER}"
 		APPLICATION_PEM = "/var/lib/jenkins/pems/devOpsDemo.pem"
 		INTERNAL_DOCKER_BACKEND = "wyataco/prueba-api:${STACK_VERSION}"
 	}
