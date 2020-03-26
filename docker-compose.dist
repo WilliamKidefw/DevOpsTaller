@@ -11,7 +11,7 @@ services:
       - 9998:5000
     environment:
       APP_PORT: 9998
-      SWAGGER_HOST: 100.26.183.20
+      SWAGGER_HOST: 54.152.219.181
 
 networks:
   apinet:
