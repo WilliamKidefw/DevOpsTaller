@@ -42,12 +42,7 @@ pipeline {
 		stage('Setup Postman') {
 			steps {
 				echo "Test Postman newman"
-				sh "sed -i 's@{{POSTMAN}}@${POSTMAN_TEST}@g' docker-compose-newman.dist"
-				sh "sed -i 's@{{POSTMAN_ENVIROMENT}}@${POSTMAN_TEST_ENVIROMENT}@g' docker-compose-newman.dist"
-				sh "sed -i 's@{{POSTMAN_PATH}}@${POSTMAN_TEST_PATH}@g' docker-compose-newman.dist"
-				sh 'cat docker-compose-newman.dist'
-				sh "docker-compose -f docker-compose-newman.dist up -d"
-				sh "docker-compose -f docker-compose-newman.dist ps"
+				newman run {{POSTMAN_PATH}}/{{POSTMAN}}.postman_collection.json --env-var "Host=54.152.219.181" --env-var "Port=9998" --env-var "num1=484" --env-var "num2=24"
 			}
 		}		
     }
