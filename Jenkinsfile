@@ -40,9 +40,11 @@ pipeline {
             }
         }
 		stage('Setup Postman') {
+			agent {
+				docker { image 'node:13.10.1-alpine'}
+			}
 			steps {
 				echo "Test Postman newman"
-				sh "npm install -g newman"
 				sh 'newman run https://www.getpostman.com/collections/138b15dd34e118843d93 --env-var "Host=54.152.219.181" --env-var "Port=9998" --env-var "num1=484" --env-var "num2=24"'
 			}
 		}		
