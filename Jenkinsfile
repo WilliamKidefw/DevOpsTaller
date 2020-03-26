@@ -41,7 +41,7 @@ pipeline {
         }
 		stage('Setup Postman') {
 			steps {
-				echo "Teset Postman newman"
+				echo "Test Postman newman"
 				sh "sed -i 's@{{POSTMAN}}@${POSTMAN_TEST}@g' docker-compose-newman.dist"
 				sh "sed -i 's@{{POSTMAN_ENVIROMENT}}@${POSTMAN_TEST_ENVIROMENT}@g' docker-compose-newman.dist"
 				sh "sed -i 's@{{POSTMAN_PATH}}@${POSTMAN_TEST_PATH}@g' docker-compose-newman.dist"

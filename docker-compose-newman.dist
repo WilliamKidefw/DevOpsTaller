@@ -8,6 +8,6 @@ services:
         run {{POSTMAN}}.postman_collection.json
         -e {{POSTMAN_ENVIROMENT}}.postman_environment.json 
         -r cli,json,junit
-        --reporter-json-export="devOps-results.json"
+        --reporter-json-export="~/postman/newmandevOps-results.json"
     volumes:
       - {{POSTMAN_PATH}}:/etc/newman
