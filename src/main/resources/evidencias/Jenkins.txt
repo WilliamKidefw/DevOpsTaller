@@ -1,0 +1,297 @@
+Started by user admin
+Obtained Jenkinsfile from git https://github.com/WilliamKidefw/DevOpsTaller.git
+Running in Durability level: MAX_SURVIVABILITY
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/devops-ci
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/WilliamKidefw/DevOpsTaller.git # timeout=10
+Fetching upstream changes from https://github.com/WilliamKidefw/DevOpsTaller.git
+ > git --version # timeout=10
+ > git fetch --tags --force --progress -- https://github.com/WilliamKidefw/DevOpsTaller.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 8598f1a5827387abc80215f6c76d548ebe4d70b9 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8598f1a5827387abc80215f6c76d548ebe4d70b9 # timeout=10
+Commit message: "Update Jenkinsfile"
+ > git rev-list --no-walk 8598f1a5827387abc80215f6c76d548ebe4d70b9 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Tool Install)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Prepare backend version)
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/devops-ci@2
+[Pipeline] {
+[Pipeline] checkout
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/WilliamKidefw/DevOpsTaller.git # timeout=10
+Fetching upstream changes from https://github.com/WilliamKidefw/DevOpsTaller.git
+ > git --version # timeout=10
+ > git fetch --tags --force --progress -- https://github.com/WilliamKidefw/DevOpsTaller.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 8598f1a5827387abc80215f6c76d548ebe4d70b9 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 8598f1a5827387abc80215f6c76d548ebe4d70b9 # timeout=10
+Commit message: "Update Jenkinsfile"
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] withDockerRegistry
+Using the existing docker config file.Removing blacklisted property: auths$ docker login -u wyataco -p ******** https://index.docker.io/v1/
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /var/lib/jenkins/workspace/devops-ci@2@tmp/a35c7349-bc32-46fc-8906-fb36f8d19cd4/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+[Pipeline] {
+[Pipeline] isUnix
+[Pipeline] sh
++ docker inspect -f . maven:3.6.3-jdk-11-slim
+.
+[Pipeline] withDockerContainer
+Jenkins does not seem to be running inside a container
+$ docker run -t -d -u 996:992 -w /var/lib/jenkins/workspace/devops-ci@2 -v /var/lib/jenkins/workspace/devops-ci@2:/var/lib/jenkins/workspace/devops-ci@2:rw,z -v /var/lib/jenkins/workspace/devops-ci@2@tmp:/var/lib/jenkins/workspace/devops-ci@2@tmp:rw,z -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** -e ******** maven:3.6.3-jdk-11-slim cat
+$ docker top 3a094b05ebd34a2c8d19245ad3c603c25ad856c4961b47456756d197d073b0db -eo pid,comm
+[Pipeline] {
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+Getting backend version with maven
+[Pipeline] echo
+Before 0.0.0
+[Pipeline] sh
++ mvn help:evaluate -Dexpression=project.version -q -DforceStdout
+[Pipeline] script
+[Pipeline] {
+[Pipeline] readFile
+[Pipeline] }
+[Pipeline] // script
+[Pipeline] echo
+After wyataco/prueba-api:0.0.2-45
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+$ docker stop --time=1 3a094b05ebd34a2c8d19245ad3c603c25ad856c4961b47456756d197d073b0db
+$ docker rm -f 3a094b05ebd34a2c8d19245ad3c603c25ad856c4961b47456756d197d073b0db
+[Pipeline] // withDockerContainer
+[Pipeline] }
+[Pipeline] // withDockerRegistry
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Setup compose enviroment)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+Building backend image wyataco/prueba-api:0.0.2-45
+[Pipeline] sh
++ docker build -t wyataco/prueba-api:0.0.2-45 .
+Sending build context to Docker daemon  51.68MB
+
+Step 1/15 : FROM maven:3.6.3-jdk-11-slim AS builder
+ ---> 828766b5e113
+Step 2/15 : WORKDIR /app
+ ---> Using cache
+ ---> 5c07696fc9ae
+Step 3/15 : COPY pom.xml .
+ ---> Using cache
+ ---> 30021c6eaa36
+Step 4/15 : RUN mvn -B -e -C -T 1C org.apache.maven.plugins:maven-dependency-plugin:3.0.2:go-offline
+ ---> Using cache
+ ---> 659a26dad256
+Step 5/15 : COPY src ./src
+ ---> Using cache
+ ---> ff282dbba7f7
+Step 6/15 : RUN ls -la ./src
+ ---> Using cache
+ ---> 47922920e421
+Step 7/15 : RUN mvn clean package -Dmaven.test.skip=true
+ ---> Using cache
+ ---> 3617ad32b82b
+Step 8/15 : RUN ls -la /app
+ ---> Using cache
+ ---> 3818612b538e
+Step 9/15 : FROM openjdk:11.0.6-jdk
+ ---> d29dd615eaf4
+Step 10/15 : LABEL maintainer="will.kidefw@gmail.com"
+ ---> Using cache
+ ---> 7bfd80de410e
+Step 11/15 : WORKDIR /workspace
+ ---> Using cache
+ ---> 7987908aed07
+Step 12/15 : RUN ls -la /workspace
+ ---> Using cache
+ ---> abcc086875e5
+Step 13/15 : COPY --from=builder /app/target/mitocode*.jar app.jar
+ ---> Using cache
+ ---> e51d11915af5
+Step 14/15 : RUN ls -la /workspace
+ ---> Using cache
+ ---> 22768c06c582
+Step 15/15 : ENTRYPOINT exec java -jar /workspace/app.jar
+ ---> Using cache
+ ---> db12559ed9cc
+Successfully built db12559ed9cc
+Successfully tagged wyataco/prueba-api:0.0.2-45
+[Pipeline] echo
+Generate docker-compose file
+[Pipeline] sh
++ sed -i 's@{{BACKEND_DOCKER_IMAGE}}@wyataco/prueba-api:0.0.2-45@g' docker-compose.dist
+[Pipeline] sh
++ cat docker-compose.dist
+version: '3.1'
+
+services:
+
+  api:
+    image: wyataco/prueba-api:0.0.2-45
+    restart: always
+    networks:
+      - apinet
+    ports:
+      - 9998:5000
+    environment:
+      APP_PORT: 9998
+      SWAGGER_HOST: 54.152.219.181
+
+networks:
+  apinet:
+    driver: bridge
+[Pipeline] sh
++ docker-compose -f docker-compose.dist up -d
+Creating network "devops-ci_apinet" with driver "bridge"
+Creating devops-ci_api_1 ... 
+[1A[2K
+Creating devops-ci_api_1 ... [32mdone[0m
+[1B
+[Pipeline] sh
++ sleep 20
+[Pipeline] sh
++ docker-compose -f docker-compose.dist ps
+     Name                    Command               State           Ports         
+---------------------------------------------------------------------------------
+devops-ci_api_1   /bin/sh -c exec java -jar  ...   Up      0.0.0.0:9998->5000/tcp
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Setup Postman)
+[Pipeline] tool
+[Pipeline] envVarsForTool
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] echo
+Test Postman newman
+[Pipeline] sh
++ newman run https://www.getpostman.com/collections/138b15dd34e118843d93 --env-var Host=54.196.142.41 --env-var Port=9998 --env-var num1=484 --env-var num2=24
+newman: Newman v4 deprecates support for the v1 collection format
+  Use the Postman Native app to export collections in the v2 format
+
+newman
+
+DevOpsTestAWS
+
+→ GetWhoami
+  GET http://54.196.142.41:9998/api/whoami [200 OK, 268B, 389ms]
+  ✓  Status code is 200
+
+→ Get Add
+  GET http://54.196.142.41:9998/api/add/484/24 [200 OK, 267B, 27ms]
+
+→ Get Sub
+  GET http://54.196.142.41:9998/api/sub/484/24 [200 OK, 267B, 10ms]
+
+→ Get Mul
+  GET http://54.196.142.41:9998/api/mul/484/24 [200 OK, 269B, 12ms]
+
+→ Get Div
+  GET http://54.196.142.41:9998/api/div/484/24 [200 OK, 266B, 8ms]
+
+┌─────────────────────────┬───────────────────┬───────────────────┐
+│                         │          executed │            failed │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│              iterations │                 1 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│                requests │                 5 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│            test-scripts │                 6 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│      prerequest-scripts │                 5 │                 0 │
+├─────────────────────────┼───────────────────┼───────────────────┤
+│              assertions │                 1 │                 0 │
+├─────────────────────────┴───────────────────┴───────────────────┤
+│ total run duration: 634ms                                       │
+├─────────────────────────────────────────────────────────────────┤
+│ total data received: 72B (approx)                               │
+├─────────────────────────────────────────────────────────────────┤
+│ average response time: 89ms [min: 8ms, max: 389ms, s.d.: 150ms] │
+└─────────────────────────────────────────────────────────────────┘
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Declarative: Post Actions)
+[Pipeline] echo
+Down ephemeral environment...
+[Pipeline] sh
++ docker-compose -f docker-compose.dist down
+Stopping devops-ci_api_1 ... 
+[1A[2K
+Stopping devops-ci_api_1 ... [32mdone[0m
+[1BRemoving devops-ci_api_1 ... 
+[1A[2K
+Removing devops-ci_api_1 ... [32mdone[0m
+[1BRemoving network devops-ci_apinet
+[Pipeline] sh
++ docker rmi -f wyataco/prueba-api:0.0.2-45
+Untagged: wyataco/prueba-api:0.0.2-45
+[Pipeline] echo
+success
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
