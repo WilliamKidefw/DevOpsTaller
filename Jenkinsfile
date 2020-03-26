@@ -1,7 +1,9 @@
 backendVersion = '0.0.0'
 
 pipeline {
+
     agent any
+	tools {nodejs "node"}
 	
 	environment {
 		EPHEMERAL_HOST = "${params.EPHEMERAL_HOST}"
@@ -45,7 +47,7 @@ pipeline {
 			}
 			steps {
 				echo "Test Postman newman"
-				sh 'newman run https://www.getpostman.com/collections/138b15dd34e118843d93 --env-var "Host=54.152.219.181" --env-var "Port=9998" --env-var "num1=484" --env-var "num2=24"'
+				sh 'newman run https://www.getpostman.com/collections/138b15dd34e118843d93 --env-var "Host=54.196.142.41" --env-var "Port=9998" --env-var "num1=484" --env-var "num2=24"'
 			}
 		}		
     }
