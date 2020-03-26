@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "c98ee230-0a40-4628-89e2-8f0cd623f0fe",
+		"name": "DevOpsTestAWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetWhoami",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{Host}}:{{Port}}/api/whoami",
+					"protocol": "http",
+					"host": [
+						"{{Host}}"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"whoami"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Add",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{Host}}:{{Port}}/api/add/{{num1}}/{{num2}}",
+					"protocol": "http",
+					"host": [
+						"{{Host}}"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"add",
+						"{{num1}}",
+						"{{num2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sub",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{Host}}:{{Port}}/api/sub/{{num1}}/{{num2}}",
+					"protocol": "http",
+					"host": [
+						"{{Host}}"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"sub",
+						"{{num1}}",
+						"{{num2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Mul",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{Host}}:{{Port}}/api/mul/{{num1}}/{{num2}}",
+					"protocol": "http",
+					"host": [
+						"{{Host}}"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"mul",
+						"{{num1}}",
+						"{{num2}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Div",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{Host}}:{{Port}}/api/div/{{num1}}/{{num2}}",
+					"protocol": "http",
+					"host": [
+						"{{Host}}"
+					],
+					"port": "{{Port}}",
+					"path": [
+						"api",
+						"div",
+						"{{num1}}",
+						"{{num2}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1e41ce02-0d4c-451b-ae9b-961aff71e954",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "fa303c09-b5e3-499a-b9e3-7369204956ec",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

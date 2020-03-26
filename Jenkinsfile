@@ -8,8 +8,8 @@ pipeline {
 		CONTAINER_BACKEND_PATH = "${params.CONTAINER_BACKEND_PATH}"
 		API_EPHEMERAL_URL = "http://${EPHEMERAL_HOST}:9998"
 		POSTMAN_TEST = "${params.POSTMAN_TEST}"
-		POSTMAN_TEST_ENVIROMENT = "${params.POSTMAN_TEST_ENVIROMENT}"
-		POSTMAN_TEST_PATH = "${params.POSTMAN_TEST_PATH}"
+-		POSTMAN_TEST_ENVIROMENT = "${params.POSTMAN_TEST_ENVIROMENT}"
+-		POSTMAN_TEST_PATH = "${params.POSTMAN_TEST_PATH}"
 	}
 	
     stages {
@@ -41,7 +41,13 @@ pipeline {
         }
 		stage('Setup Postman') {
 			steps {
-				sh 'docker run postman/newman:alpine run "https://www.getpostman.com/collections/f8d7e82fd742f91a2dad" --reporters="cli,json,junit" --reporter-json-export="var/reports/newman/json/devOps-results.json"'
+				echo "Teset Postman newman"
+				sh "sed -i 's@{{POSTMAN}}@${POSTMAN_TEST}@g' docker-compose-newman.dist"
+				sh "sed -i 's@{{POSTMAN_ENVIROMENT}}@${POSTMAN_TEST_ENVIROMENT}@g' docker-compose-newman.dist"
+				sh "sed -i 's@{{POSTMAN_PATH}}@${POSTMAN_TEST_PATH}@g' docker-compose-newman.dist"
+				sh 'cat docker-compose-newman.dist'
+				sh "docker-compose -f docker-compose-newman.dist up -d"
+				sh "docker-compose -f docker-compose-newman.dist ps"
 			}
 		}		
     }
