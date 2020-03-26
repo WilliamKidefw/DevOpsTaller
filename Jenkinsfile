@@ -9,9 +9,11 @@ pipeline {
 		EPHEMERAL_HOST = "${params.EPHEMERAL_HOST}"
 		CONTAINER_BACKEND_PATH = "${params.CONTAINER_BACKEND_PATH}"
 		API_EPHEMERAL_URL = "http://${EPHEMERAL_HOST}:9998"
-		POSTMAN_TEST = "${params.POSTMAN_TEST}"
-		POSTMAN_TEST_ENVIROMENT = "${params.POSTMAN_TEST_ENVIROMENT}"
-		POSTMAN_TEST_PATH = "${params.POSTMAN_TEST_PATH}"
+		POSTMAN_ENV_URL = "${params.POSTMAN_ENV_URL}"
+		POSTMAN_ENV_HOST = "${params.POSTMAN_ENV_HOST}"
+		POSTMAN_ENV_PORT = "${params.POSTMAN_ENV_PORT}"
+		POSTMAN_ENV_NUM1 = "${params.POSTMAN_ENV_NUM1}"
+		POSTMAN_ENV_NUM2 = "${params.POSTMAN_ENV_NUM2}"
 	}
 	
     stages {
@@ -37,14 +39,14 @@ pipeline {
 				sh "sed -i 's@{{BACKEND_DOCKER_IMAGE}}@${backendVersion}@g' docker-compose.dist"
 				sh 'cat docker-compose.dist'
 				sh "docker-compose -f docker-compose.dist up -d"
-				sh "sleep 5"
+				sh "sleep 20"
 				sh "docker-compose -f docker-compose.dist ps"
             }
         }
 		stage('Setup Postman') {
 			steps {
 				echo "Test Postman newman"
-				sh 'newman run https://www.getpostman.com/collections/138b15dd34e118843d93 --env-var "Host=54.196.142.41" --env-var "Port=9998" --env-var "num1=484" --env-var "num2=24"'
+				sh 'newman run ${POSTMAN_ENV_URL} --env-var "Host=${POSTMAN_ENV_HOST}" --env-var "Port=${POSTMAN_ENV_PORT}" --env-var "num1=${POSTMAN_ENV_NUM1}" --env-var "num2=${POSTMAN_ENV_NUM2}"'
 			}
 		}		
     }
