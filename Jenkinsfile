@@ -42,7 +42,7 @@ pipeline {
 		stage('Setup Postman') {
 			steps {
 				echo "Test Postman newman"
-				sh 'newman run ${POSTMAN_TEST_PATH}/${POSTMAN_TEST}.postman_collection.json --env-var "Host=54.152.219.181" --env-var "Port=9998" --env-var "num1=484" --env-var "num2=24"'
+				sh 'newman run https://www.getpostman.com/collections/138b15dd34e118843d93 --env-var "Host=54.152.219.181" --env-var "Port=9998" --env-var "num1=484" --env-var "num2=24"'
 			}
 		}		
     }
