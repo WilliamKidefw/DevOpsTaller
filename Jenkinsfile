@@ -41,10 +41,7 @@ pipeline {
         }
 		stage('Setup Postman') {
 			steps {
-				sh 'cat docker-compose-newman.yml'
-				sh "docker-compose -f docker-compose-newman.yml up -d"
-				sh "sleep 5"
-				sh "docker-compose -f docker-compose-newman.yml ps"
+				sh 'docker run postman/newman:alpine run "https://www.getpostman.com/collections/f8d7e82fd742f91a2dad" --reporters="cli,json,junit" --reporter-json-export="var/reports/newman/json/devOps-results.json"'
 			}
 		}		
     }
