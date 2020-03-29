@@ -5,21 +5,18 @@
     },
     "item": [
       {
-        "id": "d85bc6e3-27e4-4522-bac6-9a7e868660d4",
+        "id": "ad20880e-248a-42f7-85d5-994c774c15ee",
         "name": "GetWhoami",
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "{{Port}}",
             "path": [
               "api",
               "whoami"
             ],
             "host": [
-              "192",
-              "168",
-              "1",
-              "60"
+              "{{Host}}"
             ],
             "query": [],
             "variable": []
@@ -30,12 +27,12 @@
         "event": []
       },
       {
-        "id": "3dfe5897-da74-41e5-a984-6342dcfde63d",
+        "id": "2f891474-208c-4c08-a719-c6495feee194",
         "name": "Get Add",
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "{{Port}}",
             "path": [
               "api",
               "add",
@@ -43,10 +40,7 @@
               "{{num2}}"
             ],
             "host": [
-              "192",
-              "168",
-              "1",
-              "60"
+              "{{Host}}"
             ],
             "query": [],
             "variable": []
@@ -57,12 +51,12 @@
         "event": []
       },
       {
-        "id": "46ee011f-6c78-46aa-a82d-ec39586c8978",
+        "id": "a86e5568-7278-40ff-a8b7-ad4949b95670",
         "name": "Get Sub",
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "{{Port}}",
             "path": [
               "api",
               "sub",
@@ -70,10 +64,7 @@
               "{{num2}}"
             ],
             "host": [
-              "192",
-              "168",
-              "1",
-              "60"
+              "{{Host}}"
             ],
             "query": [],
             "variable": []
@@ -84,12 +75,12 @@
         "event": []
       },
       {
-        "id": "d535b66c-65a2-4fe0-af60-e5ad9462f87b",
+        "id": "a28ea9e0-8571-4dd8-af0d-ac0910e8ce17",
         "name": "Get Mul",
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "{{Port}}",
             "path": [
               "api",
               "mul",
@@ -97,10 +88,7 @@
               "{{num2}}"
             ],
             "host": [
-              "192",
-              "168",
-              "1",
-              "60"
+              "{{Host}}"
             ],
             "query": [],
             "variable": []
@@ -111,12 +99,12 @@
         "event": []
       },
       {
-        "id": "0c9b41ec-5085-4db9-b331-9dccf4e52899",
+        "id": "db619c39-3a3d-413e-8571-de2d23bfa959",
         "name": "Get Div",
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "{{Port}}",
             "path": [
               "api",
               "div",
@@ -124,10 +112,7 @@
               "{{num2}}"
             ],
             "host": [
-              "192",
-              "168",
-              "1",
-              "60"
+              "{{Host}}"
             ],
             "query": [],
             "variable": []
@@ -150,11 +135,11 @@
   "environment": {
     "_": {
       "postman_variable_scope": "environment",
-      "postman_exported_at": "2020-03-15T17:53:40.833Z",
-      "postman_exported_using": "Postman/7.18.1"
+      "postman_exported_at": "2020-03-21T21:32:29.802Z",
+      "postman_exported_using": "Postman/7.20.1"
     },
-    "id": "a4c6ad06-e57a-4241-8f79-c98dfa5cab11",
-    "name": "EnviromentDevOpTest",
+    "id": "3ef17991-6367-41e2-8e61-8c79cb3f9a93",
+    "name": "EnviromentDevOpLocal",
     "values": [
       {
         "type": "any",
@@ -165,11 +150,21 @@
         "type": "any",
         "value": "2",
         "key": "num2"
+      },
+      {
+        "type": "any",
+        "value": "192.168.1.60",
+        "key": "Host"
+      },
+      {
+        "type": "any",
+        "value": "8899",
+        "key": "Port"
       }
     ]
   },
   "globals": {
-    "id": "ad59ac70-12df-42c1-8114-f1fc187168e0",
+    "id": "f4ccdb2b-a369-4b74-a1ad-d7b681ab7749",
     "values": []
   },
   "run": {
@@ -221,10 +216,10 @@
       }
     },
     "timings": {
-      "responseAverage": 33.2,
-      "responseMin": 9,
-      "responseMax": 116,
-      "responseSd": 41.5855744219074,
+      "responseAverage": 64,
+      "responseMin": 11,
+      "responseMax": 252,
+      "responseSd": 94.14244526248507,
       "dnsAverage": 0,
       "dnsMin": 0,
       "dnsMax": 0,
@@ -233,8 +228,8 @@
       "firstByteMin": 0,
       "firstByteMax": 0,
       "firstByteSd": 0,
-      "started": 1584316150701,
-      "completed": 1584316150962
+      "started": 1584826846909,
+      "completed": 1584826847305
     },
     "executions": [
       {
@@ -247,25 +242,22 @@
           "eof": false,
           "bof": true,
           "cr": false,
-          "ref": "f602eac6-41a8-4a46-b588-b857affda4ef",
-          "httpRequestId": "f5aa0124-8843-4a3a-a639-bda5d9ed6c95"
+          "ref": "908fdc07-40c8-418a-bf7c-905d30c46bf5",
+          "httpRequestId": "aed04102-0096-4b00-9bae-81a46b1c446b"
         },
         "item": {
-          "id": "d85bc6e3-27e4-4522-bac6-9a7e868660d4",
+          "id": "ad20880e-248a-42f7-85d5-994c774c15ee",
           "name": "GetWhoami",
           "request": {
             "url": {
               "protocol": "http",
-              "port": "8080",
+              "port": "{{Port}}",
               "path": [
                 "api",
                 "whoami"
               ],
               "host": [
-                "192",
-                "168",
-                "1",
-                "60"
+                "{{Host}}"
               ],
               "query": [],
               "variable": []
@@ -278,7 +270,7 @@
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "8899",
             "path": [
               "api",
               "whoami"
@@ -310,12 +302,12 @@
             },
             {
               "key": "Postman-Token",
-              "value": "d55cd1f0-c4fb-4c7a-8d10-de01d9f47ad2",
+              "value": "23d56558-a529-4c7f-a634-e20ce757df01",
               "system": true
             },
             {
               "key": "Host",
-              "value": "192.168.1.60:8080",
+              "value": "192.168.1.60:8899",
               "system": true
             },
             {
@@ -332,7 +324,7 @@
           "method": "GET"
         },
         "response": {
-          "id": "42dfb9af-0aea-42ff-8244-14a5fa2603c7",
+          "id": "6c8adc15-b82a-4810-9a49-7cb9d0db784b",
           "status": "OK",
           "code": 200,
           "header": [
@@ -358,7 +350,7 @@
             },
             {
               "key": "Date",
-              "value": "Sun, 15 Mar 2020 23:49:10 GMT"
+              "value": "Sat, 21 Mar 2020 21:40:47 GMT"
             },
             {
               "key": "Keep-Alive",
@@ -375,42 +367,42 @@
               72,
               105,
               32,
-              97,
-              55,
+              54,
+              57,
               51,
-              55,
-              99,
-              51,
-              53,
+              98,
+              52,
+              52,
+              101,
+              56,
               50,
-              102,
-              102,
-              53,
-              54
+              51,
+              48,
+              100
             ]
           },
           "cookie": [],
-          "responseTime": 116,
+          "responseTime": 252,
           "responseSize": 15
         },
-        "id": "d85bc6e3-27e4-4522-bac6-9a7e868660d4"
+        "id": "ad20880e-248a-42f7-85d5-994c774c15ee"
       },
       {
         "cursor": {
-          "ref": "afee371a-c31c-4c93-a55d-a74b8d2c34c4",
+          "ref": "11ade728-5bb5-4e6c-a8bf-c9a32acf5a52",
           "length": 5,
           "cycles": 1,
           "position": 1,
           "iteration": 0,
-          "httpRequestId": "16b4eda0-7a72-4299-a002-52d828f59c25"
+          "httpRequestId": "292414b3-2c4c-4186-801c-14d8b2b1705f"
         },
         "item": {
-          "id": "3dfe5897-da74-41e5-a984-6342dcfde63d",
+          "id": "2f891474-208c-4c08-a719-c6495feee194",
           "name": "Get Add",
           "request": {
             "url": {
               "protocol": "http",
-              "port": "8080",
+              "port": "{{Port}}",
               "path": [
                 "api",
                 "add",
@@ -418,10 +410,7 @@
                 "{{num2}}"
               ],
               "host": [
-                "192",
-                "168",
-                "1",
-                "60"
+                "{{Host}}"
               ],
               "query": [],
               "variable": []
@@ -434,7 +423,7 @@
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "8899",
             "path": [
               "api",
               "add",
@@ -468,12 +457,12 @@
             },
             {
               "key": "Postman-Token",
-              "value": "6e18922b-ab3a-4ac1-b1cf-67126f06de26",
+              "value": "22e85e58-f7de-4a42-9094-106790d2fcbc",
               "system": true
             },
             {
               "key": "Host",
-              "value": "192.168.1.60:8080",
+              "value": "192.168.1.60:8899",
               "system": true
             },
             {
@@ -490,7 +479,7 @@
           "method": "GET"
         },
         "response": {
-          "id": "e4269f8b-84ba-496a-9be0-f7eb4da578c1",
+          "id": "02022e06-b7af-4c9a-ab2a-900f58fe1fa8",
           "status": "OK",
           "code": 200,
           "header": [
@@ -516,7 +505,7 @@
             },
             {
               "key": "Date",
-              "value": "Sun, 15 Mar 2020 23:49:10 GMT"
+              "value": "Sat, 21 Mar 2020 21:40:47 GMT"
             },
             {
               "key": "Keep-Alive",
@@ -542,27 +531,27 @@
             ]
           },
           "cookie": [],
-          "responseTime": 20,
+          "responseTime": 25,
           "responseSize": 9
         },
-        "id": "3dfe5897-da74-41e5-a984-6342dcfde63d"
+        "id": "2f891474-208c-4c08-a719-c6495feee194"
       },
       {
         "cursor": {
-          "ref": "76b45af9-5bec-4318-9e35-98effcd27240",
+          "ref": "63d7275c-d353-41c0-832e-5a876fee15d9",
           "length": 5,
           "cycles": 1,
           "position": 2,
           "iteration": 0,
-          "httpRequestId": "ab342963-fa03-4b8f-a23e-f718ae5c8786"
+          "httpRequestId": "41e2af73-14c2-4a25-8005-ab353b0fab34"
         },
         "item": {
-          "id": "46ee011f-6c78-46aa-a82d-ec39586c8978",
+          "id": "a86e5568-7278-40ff-a8b7-ad4949b95670",
           "name": "Get Sub",
           "request": {
             "url": {
               "protocol": "http",
-              "port": "8080",
+              "port": "{{Port}}",
               "path": [
                 "api",
                 "sub",
@@ -570,10 +559,7 @@
                 "{{num2}}"
               ],
               "host": [
-                "192",
-                "168",
-                "1",
-                "60"
+                "{{Host}}"
               ],
               "query": [],
               "variable": []
@@ -586,7 +572,7 @@
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "8899",
             "path": [
               "api",
               "sub",
@@ -620,12 +606,12 @@
             },
             {
               "key": "Postman-Token",
-              "value": "d72da93c-455d-41ca-b9dd-bc838da3c967",
+              "value": "62d81859-049e-4ea1-a5ec-c38510c19a84",
               "system": true
             },
             {
               "key": "Host",
-              "value": "192.168.1.60:8080",
+              "value": "192.168.1.60:8899",
               "system": true
             },
             {
@@ -642,7 +628,7 @@
           "method": "GET"
         },
         "response": {
-          "id": "c100177f-a064-41e1-bdb0-e5ff8d6541e2",
+          "id": "109e33b7-4b32-4e41-97a7-aeacc3e77eab",
           "status": "OK",
           "code": 200,
           "header": [
@@ -668,7 +654,7 @@
             },
             {
               "key": "Date",
-              "value": "Sun, 15 Mar 2020 23:49:10 GMT"
+              "value": "Sat, 21 Mar 2020 21:40:47 GMT"
             },
             {
               "key": "Keep-Alive",
@@ -695,27 +681,27 @@
             ]
           },
           "cookie": [],
-          "responseTime": 10,
+          "responseTime": 20,
           "responseSize": 10
         },
-        "id": "46ee011f-6c78-46aa-a82d-ec39586c8978"
+        "id": "a86e5568-7278-40ff-a8b7-ad4949b95670"
       },
       {
         "cursor": {
-          "ref": "a9b87f2b-760b-4411-8f15-093e28c070c7",
+          "ref": "1246ad74-ff66-4390-8fbe-a4caf3d2736f",
           "length": 5,
           "cycles": 1,
           "position": 3,
           "iteration": 0,
-          "httpRequestId": "c2c2b8ae-d5fe-47fd-b786-1811ab80e9a8"
+          "httpRequestId": "99945937-c1cd-4379-b586-497c78ca2f6a"
         },
         "item": {
-          "id": "d535b66c-65a2-4fe0-af60-e5ad9462f87b",
+          "id": "a28ea9e0-8571-4dd8-af0d-ac0910e8ce17",
           "name": "Get Mul",
           "request": {
             "url": {
               "protocol": "http",
-              "port": "8080",
+              "port": "{{Port}}",
               "path": [
                 "api",
                 "mul",
@@ -723,10 +709,7 @@
                 "{{num2}}"
               ],
               "host": [
-                "192",
-                "168",
-                "1",
-                "60"
+                "{{Host}}"
               ],
               "query": [],
               "variable": []
@@ -739,7 +722,7 @@
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "8899",
             "path": [
               "api",
               "mul",
@@ -773,12 +756,12 @@
             },
             {
               "key": "Postman-Token",
-              "value": "a4830f1f-366d-424d-8c77-17176da66233",
+              "value": "daab5154-6fb1-40f0-995a-b9e9121c4e42",
               "system": true
             },
             {
               "key": "Host",
-              "value": "192.168.1.60:8080",
+              "value": "192.168.1.60:8899",
               "system": true
             },
             {
@@ -795,7 +778,7 @@
           "method": "GET"
         },
         "response": {
-          "id": "7b9ce395-cc1e-4418-ac44-a8452372e6c4",
+          "id": "f6874b35-eb2c-4bc5-84a5-a891c7f33885",
           "status": "OK",
           "code": 200,
           "header": [
@@ -821,7 +804,7 @@
             },
             {
               "key": "Date",
-              "value": "Sun, 15 Mar 2020 23:49:10 GMT"
+              "value": "Sat, 21 Mar 2020 21:40:47 GMT"
             },
             {
               "key": "Keep-Alive",
@@ -847,27 +830,27 @@
             ]
           },
           "cookie": [],
-          "responseTime": 11,
+          "responseTime": 12,
           "responseSize": 9
         },
-        "id": "d535b66c-65a2-4fe0-af60-e5ad9462f87b"
+        "id": "a28ea9e0-8571-4dd8-af0d-ac0910e8ce17"
       },
       {
         "cursor": {
-          "ref": "2c85c301-ec91-4a1c-81b2-d6b5871765fd",
+          "ref": "9119d17c-e28b-4b23-b683-6950da77cf96",
           "length": 5,
           "cycles": 1,
           "position": 4,
           "iteration": 0,
-          "httpRequestId": "f2f8d281-dbdf-4bf8-b02d-2b4280c53711"
+          "httpRequestId": "ca304f4f-2634-4b0e-b5f5-80e2d7ee527a"
         },
         "item": {
-          "id": "0c9b41ec-5085-4db9-b331-9dccf4e52899",
+          "id": "db619c39-3a3d-413e-8571-de2d23bfa959",
           "name": "Get Div",
           "request": {
             "url": {
               "protocol": "http",
-              "port": "8080",
+              "port": "{{Port}}",
               "path": [
                 "api",
                 "div",
@@ -875,10 +858,7 @@
                 "{{num2}}"
               ],
               "host": [
-                "192",
-                "168",
-                "1",
-                "60"
+                "{{Host}}"
               ],
               "query": [],
               "variable": []
@@ -891,7 +871,7 @@
         "request": {
           "url": {
             "protocol": "http",
-            "port": "8080",
+            "port": "8899",
             "path": [
               "api",
               "div",
@@ -925,12 +905,12 @@
             },
             {
               "key": "Postman-Token",
-              "value": "4773bdd4-485c-4974-a02c-836e09b003a8",
+              "value": "38c65f3b-791e-47b4-9fe2-7b9db0e1b837",
               "system": true
             },
             {
               "key": "Host",
-              "value": "192.168.1.60:8080",
+              "value": "192.168.1.60:8899",
               "system": true
             },
             {
@@ -947,7 +927,7 @@
           "method": "GET"
         },
         "response": {
-          "id": "aca2591c-cbfc-4508-aecf-e87d4b9ef84a",
+          "id": "6c18d139-1f3d-4567-8d13-13cb2108c29e",
           "status": "OK",
           "code": 200,
           "header": [
@@ -973,7 +953,7 @@
             },
             {
               "key": "Date",
-              "value": "Sun, 15 Mar 2020 23:49:10 GMT"
+              "value": "Sat, 21 Mar 2020 21:40:47 GMT"
             },
             {
               "key": "Keep-Alive",
@@ -999,10 +979,10 @@
             ]
           },
           "cookie": [],
-          "responseTime": 9,
+          "responseTime": 11,
           "responseSize": 9
         },
-        "id": "0c9b41ec-5085-4db9-b331-9dccf4e52899"
+        "id": "db619c39-3a3d-413e-8571-de2d23bfa959"
       }
     ],
     "transfers": {

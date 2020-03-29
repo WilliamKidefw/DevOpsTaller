@@ -11,15 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.1.60:8080/api/whoami",
+					"raw": "http://{{Host}}:{{Port}}/api/whoami",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"60"
+						"{{Host}}"
 					],
-					"port": "8080",
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"whoami"
@@ -34,15 +31,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.1.60:8080/api/add/{{num1}}/{{num2}}",
+					"raw": "http://{{Host}}:{{Port}}/api/add/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"60"
+						"{{Host}}"
 					],
-					"port": "8080",
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"add",
@@ -59,15 +53,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.1.60:8080/api/sub/{{num1}}/{{num2}}",
+					"raw": "http://{{Host}}:{{Port}}/api/sub/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"60"
+						"{{Host}}"
 					],
-					"port": "8080",
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"sub",
@@ -84,15 +75,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.1.60:8080/api/mul/{{num1}}/{{num2}}",
+					"raw": "http://{{Host}}:{{Port}}/api/mul/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"60"
+						"{{Host}}"
 					],
-					"port": "8080",
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"mul",
@@ -109,15 +97,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://192.168.1.60:8080/api/div/{{num1}}/{{num2}}",
+					"raw": "http://{{Host}}:{{Port}}/api/div/{{num1}}/{{num2}}",
 					"protocol": "http",
 					"host": [
-						"192",
-						"168",
-						"1",
-						"60"
+						"{{Host}}"
 					],
-					"port": "8080",
+					"port": "{{Port}}",
 					"path": [
 						"api",
 						"div",
